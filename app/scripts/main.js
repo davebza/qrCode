@@ -221,7 +221,7 @@
 
           var isSetup = setupVariables(e);
           if(isSetup) {
-            window.requestAnimationFrame(captureFrame.bind(self), 4);
+            window.requestAnimationFrame(captureFrame.bind(self));
           }
           else {
             // This is just to get around the fact that the videoWidth is not
@@ -229,7 +229,7 @@
             setTimeout(function() {
               setupVariables(e);
 
-              window.requestAnimationFrame(captureFrame.bind(self), 4);
+              window.requestAnimationFrame(captureFrame.bind(self));
             }, 100);
           }
 
